@@ -1,0 +1,216 @@
+/* ----------------------
+---------------font import --------
+--------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+/* -----------------
+-----root variable 
+-------------------*/
+:root {
+    --black: #1C1C1C;
+    --hotpink: #FF214F;
+    --gray: #919191;
+    --lightgray: #EBEBEB;
+    --primary-font: 'Roboto';
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--lightgray);
+    font-family: var(--primary-font);
+}
+
+/* 00000000000000000000000000
+000000000000 header style
+000000000000000000000000000000 */
+header {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    height: 90px;
+    padding: 20px;
+}
+
+header h1 {
+    font-weight: 600;
+    font-size: 30px;
+    color: var(--black);
+}
+
+header ul {
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--black);
+    display: flex;
+    list-style: none;
+    gap: 24px;
+}
+
+/*----------------------------------
+ same style for many section 
+ ----------------------------------*/
+.container {
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px;
+    height: 300px;
+    margin: 0 auto;
+    margin-bottom: 150px;
+}
+
+.primary-description {
+    width: 100%;
+}
+
+.line-section {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.primary-title {
+    font-size: 48px;
+    font-weight: 300;
+    color: var(--gray);
+}
+
+.secondary-title {
+    color: var(--hotpink);
+    flex-shrink: 0;
+    font-weight: 300;
+    font-size: 16px;
+}
+
+.line {
+    border-bottom: 1px solid var(--hotpink);
+    width: 100%;
+}
+
+/* ------------------------------
+details section styles
+-------------------------------------- */
+.details-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section-description {
+    width: 90%;
+}
+
+
+.anchor {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    flex-shrink: 0;
+}
+
+.anchor>.one {
+    color: var(--black);
+    font-weight: 300;
+    font-size: 24px;
+}
+
+.anchor .two {
+    color: var(--gray);
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 24px;
+}
+
+/* ---------------------------
+.img-section style
+000000000000000000000000 */
+
+.img-section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+    overflow: hidden;
+}
+
+.img-two {
+    grid-row: span 2;
+}
+/* ----------------------------------
+style of current section 
+--------------------------------*/
+.current-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+    text-align: center;
+}
+
+/* style of our section */
+.our-section{
+    width: 100%;
+    max-width: 100%;
+    background-color: var(--black);
+    display: flex;
+    align-items: center;
+    height: 400px;
+    text-align: center;
+    padding: 40px;
+}
+.foot{
+    background-color: var(--black);
+    max-width: 100%;
+    color: var(--gray);
+}
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@ media queries 
+@@@@@@@@@@@@@@@@@@@@@@@*/
+@media only screen and (max-width: 688px) {
+    header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .details-section {
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .section-description {
+        width: 100%;
+    }
+
+    .secondary-title {
+        font-size: 10px;
+    }
+
+    .anchor {
+        flex-direction: row;
+    }
+
+    .img-section {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .primary-title {
+        font-size: 30px;
+    }
+
+    .secondary-title {
+        font-size: 10px;
+    }
+
+    .img-section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
